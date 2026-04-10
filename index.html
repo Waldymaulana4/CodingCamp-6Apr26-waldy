@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <main class="dashboard-grid">
+
+      <!-- Greeting & Clock -->
+      <section id="greeting" class="widget" aria-label="Greeting and clock">
+        <p id="greeting-text"></p>
+        <p id="clock"></p>
+        <p id="date"></p>
+      </section>
+
+      <!-- Focus Timer -->
+      <section id="timer" class="widget" aria-label="Focus timer">
+        <h2>Focus Timer</h2>
+        <div id="timer-display">25:00</div>
+        <div class="timer-controls">
+          <button id="btn-start" type="button">Start</button>
+          <button id="btn-stop" type="button">Stop</button>
+          <button id="btn-reset" type="button">Reset</button>
+        </div>
+      </section>
+
+      <!-- To-Do List -->
+      <section id="todo" class="widget" aria-label="To-do list">
+        <h2>To-Do</h2>
+        <form id="todo-form" novalidate>
+          <input id="todo-input" type="text" placeholder="Add a task…" autocomplete="off" />
+          <button type="submit">Add</button>
+        </form>
+        <p id="todo-error" class="error-msg" role="alert" aria-live="polite"></p>
+        <ul id="todo-list"></ul>
+      </section>
+
+      <!-- Quick Links -->
+      <section id="links" class="widget" aria-label="Quick links">
+        <h2>Quick Links</h2>
+        <form id="links-form" novalidate>
+          <input id="links-label" type="text" placeholder="Label" autocomplete="off" />
+          <input id="links-url" type="url" placeholder="https://…" autocomplete="off" />
+          <button type="submit">Add</button>
+        </form>
+        <p id="links-error" class="error-msg" role="alert" aria-live="polite"></p>
+        <div id="links-panel"></div>
+      </section>
+
+      <!-- Settings -->
+      <section class="widget">
+        <h2>Settings</h2>
+
+        <!-- Theme Toggle -->
+        <button id="toggle-theme">Toggle Light/Dark</button>
+
+        <!-- Pomodoro Time -->
+        <div>
+          <input type="number" id="pomodoro-input" placeholder="Minutes (e.g. 25)" />
+          <button id="set-pomodoro">Set Timer</button>
+        </div>
+
+        <!-- Sort Tasks -->
+        <div>
+          <button id="sort-all">All</button>
+          <button id="sort-active">Active</button>
+          <button id="sort-done">Completed</button>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
